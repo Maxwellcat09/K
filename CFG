@@ -1,0 +1,7 @@
+Configs in K files are placed before the first Construct (denoted with "start {{" and }} end), configs are structured as such:
+CFG
+USEXYTRUE/USEXYFALSE - toggles whether to use (x==?,y==?) formatting for coordinates, true turns it on, if not specified, it is true by default.
+[EXTENSIONNAME]USAGETRUE/USAGEFALSE - if you have extensions in the folder you have your code file in and you import them, you can set them to true or false here, this cfg is mainly for debugging so you can see if an extension is breaking your code.
+start {{...
+...
+}} end
