@@ -1,0 +1,12 @@
+CFG
+USEXYTRUE
+start {{
+    drawraw {
+    hslaplus(0,0,0,255)
+    polygon(x==20,y==20)(x==20,y==40)(x==40,y==40)(x==20,y==20)
+    stroke(hslaplus(0,100,100,255))(3px)
+    }
+    /c every coordinate except for the last is a point, the last is just to confirm it loops back to the start, this would make
+    a right triangle with its slanted side facing to the top right, and its angle on the bottom left c/
+    //black right triangle with 3px white outline
+}} end
