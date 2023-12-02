@@ -28,7 +28,8 @@ until jumped to c/
 //or until the program is closed, not having cscInf or a number in a loop will just make the loop print: "cannot loop - no loop amount"..
 //and be skipped
 
-
+CFG
+USEXYTRUE
 start {{
 declare variable (bool) (file)
 declare uselessvariable (bool) (file) 
