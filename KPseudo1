@@ -1,0 +1,130 @@
+//This is a singleline comment
+/c this is a multi 
+line comment c/
+
+//declare will create a variable
+//setvar sets the value of a variable
+//oponly in a declare statement means that this variable will only work in the specified operation
+//file in a declare statement means that this variable will work in the entire file 
+//curly brackets are for containing an operation
+//andif will act as an extension of an if statement, allowing you to use two or more different variables in an if statement
+//endvar will "kill" a variable, meaning that it is not being kept in RAM for no reason, good for having a variable only work in certain ops
+//drawraw will draw pixels when used with pixel, or a file if specified to the graphical console (drawimage). 
+//a graphical console is a console which can display pixels and images along with text
+//pixel is part of the draw statement, it
+//jumpln will move operations to the specified line
+//chkuse will check to see if a variable is used on a specified line, this is unorthodox, but i can see it being used
+//then statements are part of if statements, they do an action whenever an if or elseif statement is true
+//declare statements can be simplified to "dec" at the cost of readability
+//variables can have their own names, example: uselessvariable. this allows for people to use their own naming format for vars
+//setbl will create a named block at two lines in the file, these can be run at the beginning of a file or right before its block
+//jumpbl will jumpln to the beginning of a block
+//technically, K has 3 and a half tiers, these being File, Operation (the things with start and end), Block, and If statement
+/c placing :/ at the beginning (start of first line) and /: at the end (end of last line)of a block will make a block be skipped 
+until jumped to c/
+//arrays can store 2 or more of a datatype and keep them in order, this is useful for things like coordinates of a mouse
+//= is used for bool, == is used for int, dec, double and arrays
+//using cscInf or Cosmic Infinity means that the loop it is placed in will loop until something its counting hits the 32 bit integer limit..
+//or until the program is closed, not having cscInf or a number in a loop will just make the loop print: "cannot loop - no loop amount"..
+//and be skipped
+
+
+start {{
+declare variable (bool) (file)
+declare uselessvariable (bool) (file) 
+declare variable2 (bool) (oponly) 
+setvar variable = True
+setvar uselessvariable = False
+setvar variable2 = False
+setbl (50,59) "grco1"
+
+//relatively simple if/andif/then/else statement
+    if {
+        variable == True
+        chkuse variable at 7
+    } andif {
+        variable2 == False
+    } then {
+        print "Success!"
+    } else {
+        print "Elseprint"
+    }
+    endvar uselessvariable
+}} end
+
+//graphics code
+start {{
+    declare variable3 (double) (file)
+    setvar variable3 = 2.7
+    if {
+        variable3 == 2.7
+    } then {
+    drawraw {
+        hslaplus(247,69,32,255)
+        pixel(x==60,y==80)
+    } elseif {variable3 == 1.2} {
+        print"Hello blue pixel!"
+    jumpln (41)}
+    } if {variable = true
+        
+    } then {
+    setvar variable3 = 1.2
+    jumpln (27)
+    }
+}} end
+
+//graphics code fill
+start {{
+if {
+    variable3 == 1.2
+    drawraw {
+        hslaplus(321,62,42,255)
+        fillpixel (x==40,y==60)(x==80,y==100)
+    }
+}} end
+
+//basic math
+start {{
+    add (3) (double) at variable3
+    //variable3 is now 4.2
+    sub (0.2) (double) at variable3
+    //variable3 is now 4
+    conv variable3 (int)
+    //variable3 is now an integer
+    mul (3) variable3
+    //variable3 is now 12
+    div (2) variable3
+    //variable3 is now 6
+    conv variable3 (decimal)
+    //variable3 is now a decimal
+    pi (5) variable3
+    //variable3 is now 18.84954
+    //this one requires some explanation, the number is the precisity, which is how many decimals of pi it will try to use.
+    //then it will multiply the variable by that number
+    rnd (1) variable3
+    //variable 3 is rounded to tenths (one decimal), meaning it is now 18.8
+    conv variable3 (int)
+    //variable3 is automatically rounded to 19 to become an integer
+    print variable3
+}} end
+
+//very VERY simple drawing thing
+start {{
+declare mousePos (integer) (array(x,y)) (file) 
+declare mouseClick (bool) (file)
+loop {
+get.mouseposition {
+    writevar (int) mousePos
+    }
+get.mouseclickstatus {
+    writevar (bool) mouseClick
+    }
+    if {
+        mouseClick = true
+        } then { 
+            drawraw {
+        hslaplus(0,0,0,255)
+        pixel(mousePos)
+    }
+}} end
+
