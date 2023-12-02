@@ -34,10 +34,13 @@ start {{
 declare variable (bool) (file)
 declare uselessvariable (bool) (file) 
 declare variable2 (bool) (oponly) 
+//create the variables
 setvar variable = True
 setvar uselessvariable = False
 setvar variable2 = False
+//set the values of the just created variables
 setbl (50,59) "grco1"
+//create a block
 
 //relatively simple if/andif/then/else statement
     if {
@@ -51,6 +54,7 @@ setbl (50,59) "grco1"
         print "Elseprint"
     }
     endvar uselessvariable
+//delete uselessvariable
 }} end
 
 //graphics code
@@ -61,8 +65,9 @@ start {{
         variable3 == 2.7
     } then {
     drawraw {
-        hslaplus(247,69,32,255)
+        hslaplus(247,69,32,1)
         pixel(x==60,y==80)
+//draw a blue pixel at x60 by y80
     } elseif {variable3 == 1.2} {
         print"Hello blue pixel!"
     jumpln (41)}
@@ -70,6 +75,7 @@ start {{
         
     } then {
     setvar variable3 = 1.2
+//set variable3 to 1.2
     jumpln (27)
     }
 }} end
@@ -79,8 +85,9 @@ start {{
 if {
     variable3 == 1.2
     drawraw {
-        hslaplus(321,62,42,255)
+        hsla(321,62,42,1)
         fillpixel (x==40,y==60)(x==80,y==100)
+//create a soft purple square
     }
 }} end
 
