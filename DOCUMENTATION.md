@@ -1,0 +1,120 @@
+an Operation is defined by the 
+start {{
+and
+}} end
+theyre made for scoping
+
+Blocks are inside Magnopers, they can be defined via
+setbl(//start line number,// end line number)
+they can be skipped until jumped to if a /: is placed at the beginning of the first line that the block applies on, and a :/ on the end of the last line
+
+All code, excluding CFG, must be in an Operation
+
+Math
+add - adds specified number
+sub - opposite of add
+mul - multiplies specified number by specified variable
+div - opposite of mul
+conv - converts a variable's datatype to the specified datatype
+pie - multiply a variable by Pi, preciseness can be specified
+
+Basic
+declare - declares a variables name, data type, whether its an array or not, and scope
+setVar - sets the value of a variable
+writeVar - pulls the first value (or values in an array) from code in its curly braces
+print - prints a variable or a string in quotes to one line
+if - checks if a variable is true, can be modified by NOT logic with if(not), can only use one variable, but infinitely many times one its own
+andIf - allows you to use more than one variable in an if statement, goes on the line after the If's variables, can also be modified with NOT
+chkuse - allows you to check if a variable was used or written toon a certain line or lines in your code. can be used like: chkuse (3-7) variable3
+endVar - deletes a file variable at the end of current operation to prevent unnecessary usage of RAM. endVar (uselessVar)
+
+Flow
+setBl - Creates a block, as stated earlier, blocks can be skipped until jumped to with jumpBl if you put /: on the start of the block and :/ on the end. setBl (9,21) "blockWhatever"
+jumpBl - Jumps to the beginning of your block. jumpBl (blockWhatever)
+jumpLn - jumps to a line in your code.
+loop - Loops a code for a specified time amount of runs.
+Example:
+loop (3) {
+...
+}
+cscInf - a variable that can be placed in the run amount of loops, runs until break statement is hit, program is closed or loop is edited by external file, means Cosmic Infinity, a reference to Gloryhammer
+break - breaks a loop prematurely
+delay - delays entire flow for a specified amount of operations
+fullDelay - sets the amount of delays between an operation
+
+Code and file management/editing
+editLn - allows you to edit a line in your code. editLn (7) "/:print "this text in the beginning of a block has been edited with editLn""
+backup - backs up the latest version of the code before running to a .kb (K Backup) file. backup "codefilebackup"
+call - calls a .k file to start running. call (external.k)
+editExtLn - edit an external file's line. editLn (22) (path\external.k) "endvar (dumbVar)
+deleteExt - Deletes an external file. deleteExt (Polly.png)
+odin - create an external file. odin (path\) (filename) (extension)
+
+Graphics
+drawRaw - use this to start manual drawing (pixel, fillpixel and polygon)
+hsla/rgba/cmyk - color models that you can use for manual drawing
+hslaplus - a proprietary version of HSLA that uses 255 for alpha instead of 0-1
+polygon - draws a polygon based on coordinates. 
+fillPixel - draws a rectangle based on coordinates.
+pixel - colors a singular pixel.
+drawImg - draws an image from a file, accepts PNG and JPG. drawImg (Jake.jpg)
+
+Audio
+wave - Produces a digital sound wave, would likely need an extension to work right. wave (wavelength) (amplitude) (frequency) (timeperiod) (velocity)
+playSnd - plays audio from a file, accepts .wav files. playSnd (Wimbledon.wav)
+
+Config
+CFG - starts a cfg section, can only be used once at the beginning of your code, behind the first "start {{"
+USEXYTRUE/USEXYFALSE - toggles whether coordinates need x==?,y==? to function, if set to USEXYFALSE, they will be reduced to ?,? only
+
+//This is a singleline comment
+/c this is a multi 
+line comment c/
+
+
+Multiple Variable If Statement (MVIS):
+start {{
+Declare variable (bool)
+Declare variable2 (bool)
+setVar variable = True
+setVar variable2 = False
+if {
+variable = True
+chkuse (4) variable
+} andif {
+variable2 = False
+} then {
+print variable
+
+Hello World:
+start {{
+print "Hello World"
+}} end
+
+Hello World with a variable:
+start ((
+Declare hello (string) (oponly)
+setVar hello "Hello World!!!"
+print hello
+}} end
+
+Right Triangle with outline example:
+drawraw {
+hslaplus(0,0,0,255)
+polygon(x==20,y==20)(x==20,y==40)(x==40,y==40)(x==20,y==20)
+hslaplus(0,100,100,255)
+stroke(3px)
+
+Double-negative if/andif
+start {{
+  declare flag (bool)
+  setVar flag true
+  
+  if {
+    flag == true
+  } andif (NOT) {
+    flag =/= true
+  } then {
+    print "Flag is true"
+  }
+}} end
