@@ -136,3 +136,13 @@ start {{
     print "Flag is true"
   }
 }} end
+
+A skipped block
+start {{
+setBl (3-5) "Block A"
+/:
+print "I was skipped for 60 operations."
+:/
+delay (60)
+jumpBl (Block A)
+}} end
