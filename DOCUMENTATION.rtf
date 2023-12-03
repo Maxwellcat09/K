@@ -10,13 +10,18 @@ they can be skipped until jumped to if a /: is placed at the beginning of the fi
 
 All code, excluding CFG, must be in an Operation
 
+Variables can be named anything
+
 Math
-add - adds specified number
-sub - opposite of add
-mul - multiplies specified number by specified variable
-div - opposite of mul
+icr - increases a variable by 1. inc intvariable
+dcr - decreases a variable by 1. dcr intvariable
+add - adds specified number to a variable. add (7) intvariable
+sub - opposite of add. sub (6) intvariable
+mul - multiplies specified number by specified variable. mul (3) intvariable
+div - opposite of mul. div (2) intvariable
 conv - converts a variable's datatype to the specified datatype
 pie - multiply a variable by Pi, preciseness can be specified
+rand - when placed just before an 2 number integer or decimal in a setvar statement, it will pick a random number between the numbers and write it to the variable. setVar randomvariable rand(1, 100)
 
 Basic
 declare - declares a variables name, data type, whether its an array or not, and scope
