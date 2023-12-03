@@ -62,9 +62,9 @@ Code and file management/editing
 editLn - allows you to edit a line in your code. editLn (7) "/:print "this text in the beginning of a block has been edited with editLn""
 backup - backs up the latest version of the code before running to a .kb (K Backup) file. backup "codefilebackup"
 call - calls a .k file to start running. call (external.k)
-ser - create an external file. odin (path\) (filename) (extension)
-serEdit - edit an external file's line. editLn (22) (path\external.k) "endvar (dumbVar)
-serDel - Deletes an external file. odinDel (Polly.png)
+ser - create an external file. ser (path\) (filename) (extension)
+serEdit - edit an external file's line. serEdit (22) (path\external.k) "endvar (dumbVar)
+serDel - Deletes an external file. serDel (Polly.png)
 
 Graphics
 drawRaw - use this to start manual drawing (pixel, fillpixel and polygon). drawRaw (kWindow to draw to) {multiline drawing code}
