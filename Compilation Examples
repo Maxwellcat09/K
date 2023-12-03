@@ -35,3 +35,43 @@ def main():
     window.mainloop()
 
 main()
+
+
+//C#
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+class Program
+{
+    static void Main()
+    {
+        Application.EnableVisualStyles();
+        Application.Run(new TriangleForm());
+    }
+}
+
+class TriangleForm : Form
+{
+    public TriangleForm()
+    {
+        this.BackColor = Color.White;
+        this.Size = new Size(300, 300);
+
+        this.Paint += TriangleForm_Paint;
+    }
+
+    private void TriangleForm_Paint(object sender, PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        Brush brush = new SolidBrush(Color.Red);
+
+        Point[] points = {
+            new Point(50, 250),
+            new Point(150, 50),
+            new Point(250, 250)
+        };
+
+        g.FillPolygon(brush, points);
+    }
+}
