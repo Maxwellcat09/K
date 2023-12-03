@@ -103,6 +103,10 @@ USEXYTRUE/USEXYFALSE - toggles whether coordinates need x==?,y==? to function, i
 
 Internet
 $link - can be used in button as executed code, will open a link in the default browser. $link (https://www.youtube.com/watch?v=YGV6bCTMM5w)
+$hPost - Sends a POST request method to an HTTP link. $hPost /yourendpoint (yourhost.com) (application/content) (Bearer accessToken) { key (value) }
+$hGet - Sends a GET request method to an HTTP link. $hGet /yourendpoint (yourhost.com) (application/content) (Bearer accessToken) { key (value) }
+$hPut - Sends a PUT request method to an HTTP link. Syntax: $hPut /yourendpoint (yourhost.com) (application/content) (Bearer accessToken) { key (value) }
+$hDelete - Sends a DELETE request method to an HTTP link. Syntax: $hDelete /yourendpoint (yourhost.com) (application/content) (Bearer accessToken) { key (value) }
 
 //This is a singleline comment
 /c this is a multi 
