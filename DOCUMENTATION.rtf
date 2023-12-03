@@ -40,7 +40,8 @@ rand - when placed just before an 2 number integer or decimal in a setvar statem
 Basic
 declare - declares a variables name, data type, whether its an array or not, and scope
 setVar - sets the value of a variable
-writeVar - pulls the first value (or values in an array) from code in its curly braces. writeVar
+writeVar - pulls the first value (or values in an array) from code in its curly braces. 
+duplVar - reads a variable and prints it to a different variable. duplVar (sourcevariable) (destinationvariable)
 print - prints a variable or a string in quotes to one line
 if - checks if a variable is true, can be modified by NOT logic with if(not), can only use one variable, but infinitely many times one its own
 andIf - allows you to use more than one variable in an if statement, goes on the line after the If's variables, can also be modified with NOT
@@ -96,6 +97,10 @@ button ((clickbox x/y) (window id)
     on.Click {
 Code to execute when clicked
               }
+input - an input allows a user to write to a variable through the console, input can be customized with print
+input (variableuser) (integer) {
+print "what is your favorite number?"
+}
 
 Config
 CFG - starts a cfg section, can only be used once at the beginning of your code, behind the first "start {{"
