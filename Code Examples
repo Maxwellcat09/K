@@ -54,3 +54,11 @@ print "I was skipped for 60 operations."
 delay (60)
 jumpBl (Block A)
 }} end
+
+Blue Triangle line
+start {{
+drawraw {
+hsla(226,100,62,1)
+drawLine (5px) (x==4,y==0)(x==0,y==8)(x==8,y==8)
+}
+}} end
