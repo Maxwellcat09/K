@@ -75,3 +75,64 @@ class TriangleForm : Form
         g.FillPolygon(brush, points);
     }
 }
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Blue cube on 16x16 grid
+K:
+CFG
+16x16GRID
+start {{
+drawraw {
+hsla(226,100,62,1)
+drawLine (5px) (x==0,y==1)(x==1,y==0)(x==5,y==0)(x==5,y==4)(x==4,y==5)
+hsla(226,100,62,1)
+drawLine (5px) (x==4,y==1)(x==0,y==1)(x==0,y==5)(x==4,y==5)(x==4,y==1)(x==5,y==0)
+}
+}} end
+
+Python:
+import pygame
+
+# Function to draw a line with specified thickness
+def draw_line(surface, color, thickness, points):
+    pygame.draw.lines(surface, color, False, points, thickness)
+
+# Function to draw using HSLA color
+def draw_with_hsla(surface, hsla_color, thickness, points):
+    color = pygame.Color(0, 0, 0, 0)
+    color.hsla = hsla_color
+    draw_line(surface, color, thickness, points)
+
+# Function to replicate the given K code
+def draw_k_code():
+    # Initialize pygame
+    pygame.init()
+
+    # Set up the window
+    window_size = (256, 256)  # 16x16 grid with 16x16 squares
+    window = pygame.display.set_mode(window_size)
+    pygame.display.set_caption("K Drawing in Python")
+
+    # Clear the screen
+    window.fill((255, 255, 255))
+
+    # Execute the drawraw code without the grid
+    draw_with_hsla(window, (226, 100, 62, 1), 5, [(0, 16), (16, 0), (80, 0), (80, 64), (64, 80)])
+    draw_with_hsla(window, (226, 100, 62, 1), 5, [(64, 16), (0, 16), (0, 80), (64, 80), (64, 16), (80, 0)])
+
+    # Update the display
+    pygame.display.flip()
+
+    # Run the event loop
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+    # Quit pygame
+    pygame.quit()
+
+# Call the draw_k_code function
+draw_k_code()
