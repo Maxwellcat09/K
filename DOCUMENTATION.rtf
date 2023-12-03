@@ -70,9 +70,9 @@ Code and file management/editing
 editLn - allows you to edit a line in your code. editLn (7) "/:print "this text in the beginning of a block has been edited with editLn""
 backup - backs up the latest version of the code before running to a .kb (K Backup) file. backup "codefilebackup"
 call - calls a .k file to start running. call (external.k)
-ser - create an external file. ser (path\) (filename) (extension)
-serEdit - edit an external file's line. serEdit (22) (path\external.k) "endvar (dumbVar)
-serDel - Deletes an external file. serDel (Polly.png)
+$ser - create an external file. $ser (path\) (filename) (extension)
+$serEdit - edit an external file's line. $serEdit (22) (path\external.k) "endvar (dumbVar)
+$serDel - Deletes an external file. $serDel (Polly.png)
 
 Graphics
 drawRaw - use this to start manual drawing (pixel, fillpixel and polygon). drawRaw (kWindow to draw to) {multiline drawing code}
@@ -89,10 +89,10 @@ wave - Produces a digital sound wave, would likely need an extension to work rig
 playSnd - plays audio from a file, accepts .wav files. playSnd (Wimbledon.wav)
 
 Interaction
-button - a button is an clickable object that can trigger a series of events, and can be drawn on to make a custom button. you do not need to use drawraw when drawing for a button, only works in windows.
+button - a button is an clickable object that can trigger a series of events, and can be drawn on (and/or printed on top of) to make a custom button. you do not need to use drawraw when drawing for a button, only works in app windows.
 button ((clickbox x/y) (window id)
   (drawing code)
-  (drawing code))
+  (print))
     on.Click {
 Code to execute when clicked
               }
@@ -100,6 +100,9 @@ Code to execute when clicked
 Config
 CFG - starts a cfg section, can only be used once at the beginning of your code, behind the first "start {{"
 USEXYTRUE/USEXYFALSE - toggles whether coordinates need x==?,y==? to function, if set to USEXYFALSE, they will be reduced to ?,? only
+
+Internet
+$link - can be used in button as executed code, will open a link in the default browser. $link (https://www.youtube.com/watch?v=YGV6bCTMM5w)
 
 //This is a singleline comment
 /c this is a multi 
