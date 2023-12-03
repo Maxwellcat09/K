@@ -62,3 +62,8 @@ hsla(226,100,62,1)
 drawLine (5px) (x==4,y==0)(x==0,y==8)(x==8,y==8)
 }
 }} end
+
+Mouse position grabber
+start {{
+loop (cscInf) {
+declare mousePos
