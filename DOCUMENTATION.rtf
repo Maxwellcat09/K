@@ -28,6 +28,9 @@ andIf - allows you to use more than one variable in an if statement, goes on the
 chkuse - allows you to check if a variable was used or written toon a certain line or lines in your code. can be used like: chkuse (3-7) variable3
 endVar - deletes a file variable at the end of current operation to prevent unnecessary usage of RAM. endVar (uselessVar)
 
+Window
+kWindow - Summons a Windows 10 window for drawing or buttons. kWindow (resolution, uses x== and y== if config is enabled) (window ID) (window Title) (resizeable? bool)
+
 Flow
 setBl - Creates a block, as stated earlier, blocks can be skipped until jumped to with jumpBl if you put /: on the start of the block and :/ on the end. setBl (9,21) "blockWhatever"
 jumpBl - Jumps to the beginning of your block. jumpBl (blockWhatever)
@@ -51,17 +54,27 @@ deleteExt - Deletes an external file. deleteExt (Polly.png)
 odin - create an external file. odin (path\) (filename) (extension)
 
 Graphics
-drawRaw - use this to start manual drawing (pixel, fillpixel and polygon)
+drawRaw - use this to start manual drawing (pixel, fillpixel and polygon). drawRaw (kWindow to draw to) {multiline drawing code}
 hsla/rgba/cmyk - color models that you can use for manual drawing
 hslaplus - a proprietary version of HSLA that uses 255 for alpha instead of 0-1
 polygon - draws a polygon based on coordinates. 
 fillPixel - draws a rectangle based on coordinates.
 pixel - colors a singular pixel.
 drawImg - draws an image from a file, accepts PNG and JPG. drawImg (Jake.jpg)
+wash - clear all pixels from the screen
 
 Audio
 wave - Produces a digital sound wave, would likely need an extension to work right. wave (wavelength) (amplitude) (frequency) (timeperiod) (velocity)
 playSnd - plays audio from a file, accepts .wav files. playSnd (Wimbledon.wav)
+
+Interaction
+button - a button is an clickable object that can trigger a series of events, and can be drawn on to make a custom button. you do not need to use drawraw when drawing for a button, only works in windows.
+button ((clickbox x/y) 
+  (drawing code)
+  (drawing code))
+    on.Click {
+Code to execute when clicked
+              }
 
 Config
 CFG - starts a cfg section, can only be used once at the beginning of your code, behind the first "start {{"
