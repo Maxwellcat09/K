@@ -4,12 +4,12 @@ start {{
 }} end
 
 Curly braces always close on a different line than they start, and never end on a line that has its own code
+Parenthesis always close on the same line and only contain one variable (or array)
 
 loop (cscInf) {
 //your code
 } until {
 chku
-
 
 Blocks are inside Operations, they can be defined via
 setbl(//start line number,// end line number)
@@ -18,6 +18,13 @@ they can be skipped until jumped to if a /: is placed at the beginning of the fi
 All code, excluding CFG, must be in an Operation
 
 Variables can be named anything
+
+Datatypes
+integer
+bool
+float
+character
+string
 
 Math
 icr - increases a variable by 1. icr intvariable
@@ -55,8 +62,9 @@ loop (3) {
 }
 cscInf - a variable that can be placed in the run amount of loops, runs until break statement is hit, program is closed or loop is edited by external file, means Cosmic Infinity, a reference to Gloryhammer
 break - breaks a loop prematurely
-delay - delays entire flow for a specified amount of operations
-fullDelay - sets the amount of delays between an operation
+delay - delays entire flow for a specified amount of operations. delay (10)
+fullDelay - sets the amount of delays between an operation. fullDelay (5)
+tay - skip over a specified amount of lines. tay (9)
 
 Code and file management/editing
 editLn - allows you to edit a line in your code. editLn (7) "/:print "this text in the beginning of a block has been edited with editLn""
