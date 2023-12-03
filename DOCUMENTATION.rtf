@@ -3,6 +3,14 @@ start {{
 ...
 }} end
 
+Curly braces always close on a different line than they start, and never end on a line that has its own code
+
+loop (cscInf) {
+//your code
+} until {
+chku
+
+
 Blocks are inside Operations, they can be defined via
 setbl(//start line number,// end line number)
 they can be skipped until jumped to if a /: is placed at the beginning of the first line that the block applies on, and a :/ on the end of the last line
@@ -25,15 +33,16 @@ rand - when placed just before an 2 number integer or decimal in a setvar statem
 Basic
 declare - declares a variables name, data type, whether its an array or not, and scope
 setVar - sets the value of a variable
-writeVar - pulls the first value (or values in an array) from code in its curly braces
+writeVar - pulls the first value (or values in an array) from code in its curly braces. writeVar
 print - prints a variable or a string in quotes to one line
 if - checks if a variable is true, can be modified by NOT logic with if(not), can only use one variable, but infinitely many times one its own
 andIf - allows you to use more than one variable in an if statement, goes on the line after the If's variables, can also be modified with NOT
 chkuse - allows you to check if a variable was used or written toon a certain line or lines in your code. can be used like: chkuse (3-7) variable3
 endVar - deletes a file variable at the end of current operation to prevent unnecessary usage of RAM. endVar (uselessVar)
 
-Window
+advanced
 kWindow - Summons a Windows 10 window for drawing or buttons. kWindow (resolution, uses x== and y== if config is enabled) (window ID) (window Title) (resizeable? bool)
+mouse.getPos - grabs the mouse position, must be in a writeVar
 
 Flow
 setBl - Creates a block, as stated earlier, blocks can be skipped until jumped to with jumpBl if you put /: on the start of the block and :/ on the end. setBl (9,21) "blockWhatever"
@@ -53,9 +62,9 @@ Code and file management/editing
 editLn - allows you to edit a line in your code. editLn (7) "/:print "this text in the beginning of a block has been edited with editLn""
 backup - backs up the latest version of the code before running to a .kb (K Backup) file. backup "codefilebackup"
 call - calls a .k file to start running. call (external.k)
-editExtLn - edit an external file's line. editLn (22) (path\external.k) "endvar (dumbVar)
-deleteExt - Deletes an external file. deleteExt (Polly.png)
-odin - create an external file. odin (path\) (filename) (extension)
+ser - create an external file. odin (path\) (filename) (extension)
+serEdit - edit an external file's line. editLn (22) (path\external.k) "endvar (dumbVar)
+serDel - Deletes an external file. odinDel (Polly.png)
 
 Graphics
 drawRaw - use this to start manual drawing (pixel, fillpixel and polygon). drawRaw (kWindow to draw to) {multiline drawing code}
