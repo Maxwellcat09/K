@@ -1,7 +1,7 @@
 Multiple Variable If Statement (MVIS):
 start {{
-Declare variable (bool)
-Declare variable2 (bool)
+declare variable (bool)
+declare variable2 (bool)
 setVar variable = True
 setVar variable2 = False
 if {
