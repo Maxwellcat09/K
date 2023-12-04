@@ -8,6 +8,7 @@ Parenthesis always close on the same line and only contain one variable (or arra
 Parenthesis will always only have 1(one) parameter in itself.
 Dollar signs denote an external action, like a file edit or HTTP request, are always placed before the first character of a command, these are used as a stop from new developers accidentally deleting or editing files.
 Dollar signs can be toggled with the CFG command: SERSIGNTRUE/SERSIGNFALSE
+Square brackets are always ignored, but can make your code a little bit more readable (say marking the start and end of a block without skipping said block).
 
 loop (cscInf) {
 //your code
@@ -73,6 +74,7 @@ break - breaks a loop prematurely
 delay - delays entire flow for a specified amount of operations. delay (10)
 fullDelay - sets the amount of delays between an operation. fullDelay (5)
 tay - skip over a specified amount of lines. tay (9)
+instant - instantly executes all inside its curly brackets
 
 Code and file management/editing
 editLn - allows you to edit a line in your code. editLn (7) "/:print "this text in the beginning of a block has been edited with editLn""
