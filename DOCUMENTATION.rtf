@@ -145,7 +145,7 @@ errorcode: sError1 - Alulim
 explanation: 'if' improper syntax at 7-9
 troubleshoot: incorrect bracket usage - did you mean this?
 "if {
-    variable1 = 19
+    variable1 == 19
 } th... [rest of your code]"
 This error occurs if you are missing, or have improperly placed your curly brackets.
 
@@ -153,7 +153,7 @@ errorcode: sError2 - Alalngar
 explanation: 'if' improper syntax at 7-9
 troubleshoot: 'varrable1' is not a variable - did you mean this?
 "if {
-    variable1 = 19
+    variable1 == 19
 } th... [rest of your code]"
 This error occurs if a variable has been misspelt, or does not exist in your operation.
 the variable suggestor works via seeing if there is a variable within 3 changed letters of the improper variable, and choose the first one. if there is not, then it will post, instead of the correct variable //choose a variable
