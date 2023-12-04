@@ -92,7 +92,12 @@ $serEdit - edit an external file's line. $serEdit (22) (path\external.k) "endvar
 $serDel - Deletes an external file. $serDel (Polly.png)
 
 Array
-arrayDeclare - more configurable version of declare meant for making arrays. 
+arrayDeclare - more configurable version of declare meant for making arrays. arrayDeclare "arrayVariable" (datatype) (array size)
+arraySet - sets the values in an Array variable. arraySet arrayVariable {(your values) (more values on another line)}
+arrayBset - sets the values in an Array variable in bulk. arrayBset arrayVariable (1-2048)
+shuffle - shuffles an array. shuffle arrayVariable (shuffle method)
+sort - Sorts an array with an existing sorting algorithm. sort arrayVariable (sorting order) (sorting method)
+checkArray - checks if an array is sorted in a certain order, then prints to a bool variable if its sorted or not. checkArray arrayVariable (order) boolVariable
 
 Graphics
 drawRaw - use this to start manual drawing (pixel, fillpixel and polygon). drawRaw (kWindow to draw to) {multiline drawing code}
