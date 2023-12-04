@@ -3,14 +3,16 @@ start {{
 ...
 }} end
 
-Curly braces always close on a different line than they start, and never end on a line that has its own code
-Parenthesis always close on the same line and only contain one variable (or array)
-Dollar signs denote an external action, like a file edit or HTTP request
+Curly braces always close on a different line than they start, will never have its own code on the same line they start, and never end on a line that has its own code.
+Parenthesis always close on the same line and only contain one variable (or array), all parenthesis for a command can be put on the same line, but its a good option to set them all on a different line.
+Parenthesis will always only have 1(one) parameter in itself.
+Dollar signs denote an external action, like a file edit or HTTP request, are always placed before the first character of a command, these are used as a stop from new developers accidentally deleting stuff.
 
 loop (cscInf) {
 //your code
 } until {
-chku
+chkuse (7) randvariable
+randvariable == 1
 
 Blocks are inside Operations, they can be defined via
 setbl(//start line number,// end line number)
