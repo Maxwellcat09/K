@@ -51,7 +51,7 @@ bleed - decreases a variable by a configurable amount every operation or amount 
 
 Basic
 declare - declares a variables name, data type, whether its an array or not, and scope
-//work on classes tommorow, today we slay
+//ykw imma make a separate section for classes, that crab is complicated
 setVar - sets the value of a variable
 writeVar - pulls the first value (or values in an array) from code in its curly braces. 
 duplVar - reads a variable and prints it to a different variable. duplVar (sourcevariable) (destinationvariable)
@@ -62,11 +62,18 @@ andIf - allows you to use more than one variable in an if statement, goes on the
 else - if an if statement is not true, the code does the code in the curly brackets.
 elseif - like an else statement, but also has values that must be proven true. uses a then statement like if.
 then - opposite of else, only does code if true.
-chkuse - allows you to check if a variable was used or written toon a certain line or lines in your code. can be used like: chkuse (3-7) variable3
+chkuse - allows you to check if a variable was mentioned on a certain line or lines in your code. chkuse (3-7) variable3
 endVar - deletes a file variable at the end of current operation to prevent unnecessary usage of RAM. endVar (uselessVar)
 
 Advanced
 kWindow - Summons a Windows 10 window for drawing or buttons. kWindow (resolution, uses x== and y== if config is enabled) (window ID) (window Title) (resizeable? bool)
+classDec - Creates a class with custom datatypes.
+classDec "Cat" {
+name
+breed
+}
+
+
 
 Auxillaries
 mouse.getPos - grabs the mouse position then writes to a variable. mouse.getpos (variable1)
