@@ -55,6 +55,7 @@ declare - declares a variables name, data type, whether its an array or not, and
 setVar - sets the value of a variable
 writeVar - pulls the first value (or values in an array) from code in its curly braces. 
 duplVar - reads a variable and prints it to a different variable. duplVar (sourcevariable) (destinationvariable)
+hasVar - checks if a variable has a certain character in it, then writes to a boolean variable
 print - prints a variable or a string in quotes to one line
 if - checks if a variable is true, then uses a then statement to execute it. can be modified by NOT logic with if(not), can only use one variable, but infinitely many times one its own.
 andIf - allows you to use more than one variable in an if statement, goes on the line after the If's variables, can also be modified with NOT.
@@ -68,7 +69,8 @@ Advanced
 kWindow - Summons a Windows 10 window for drawing or buttons. kWindow (resolution, uses x== and y== if config is enabled) (window ID) (window Title) (resizeable? bool)
 
 Auxillaries
-mouse.getPos - grabs the mouse position, must be in a writeVar
+mouse.getPos - grabs the mouse position then writes to a variable. mouse.getpos (variable1)
+key.getPress - grabs the current keypress then writes to a variable. key.getPress (variable1)
 
 
 Flow
