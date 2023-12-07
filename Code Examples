@@ -19,8 +19,8 @@ print "Hello World"
 
 Hello World with a variable:
 start ((
-Declare hello (string) (oponly)
-setVar hello "Hello World!!!"
+declare hello (string) (oponly)
+setVar (hello) "Hello World!!!"
 print hello
 }} end
 
