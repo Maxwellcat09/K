@@ -68,20 +68,26 @@ endVar - deletes a file variable at the end of current operation to prevent unne
 Advanced
 kWindow - Summons a Windows 10 window for drawing or buttons. kWindow (resolution // uses x== and y== if config is enabled //) (window ID) (window Title) (resizeable? //bool//)
 classDec - Creates a class with custom datatypes.
-classDec "ClassName" {
+classDec "className" {
     attributeName1
     attributeName2
 }
-objeDec - Creates an Object
-objeDec "ClassName" {
+You can also use inheiritance like so.
+classDec "childClass" : "parentClass" {
+    additionalAttribute
+}
+
+objeDec - Creates an Object based on a class.
+objeDec "className" "objectName {
     attributeValue1
     attributeValue2
 }
-func - Creates a function, basically doing a block of code, then jumping back, or with "func functionName p", will run it parallel to your current code
-func functionName {
+func - Creates or calls a function, basically doing a block of code, then jumping back, or with "func call functionName p", will run it parallel to your current code
+func dec functionName {
      mouse.getPos variable1
 }
-
+func call works like so.
+func call p functionName
 
 Auxillaries
 mouse.getPos - grabs the mouse position then writes to a variable. mouse.getPos (variable1)
