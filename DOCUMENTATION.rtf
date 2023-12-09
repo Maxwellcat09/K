@@ -68,12 +68,15 @@ endVar - deletes a file variable at the end of current operation to prevent unne
 Advanced
 kWindow - Summons a Windows 10 window for drawing or buttons. kWindow (resolution, uses x== and y== if config is enabled) (window ID) (window Title) (resizeable? bool)
 classDec - Creates a class with custom datatypes.
-classDec "Cat" {
-name
-breed
+classDec "ClassName" {
+    attributeName1
+    attributeName2
 }
-
-
+objeDec - Creates an Object
+objeDec "ClassName" {
+    attributeValue1
+    attributeValue2
+}
 
 Auxillaries
 mouse.getPos - grabs the mouse position then writes to a variable. mouse.getpos (variable1)
@@ -127,9 +130,6 @@ pixel - colors a singular pixel.
 drawImg - draws an image from a file, accepts PNG and JPG. drawImg (Jake.jpg)
 drawLine - draws a multi-segment line with a configurable thickness. drawLine (5px) (x==4,y==0)(x==0,y==8)(x==8,y==8)
 wash - clear all pixels from the screen
-
-3D
-
 
 Audio
 wave - Produces a digital sound wave, would likely need an extension to work right. wave (wavelength) (amplitude) (frequency) (timeperiod) (velocity)
