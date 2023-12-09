@@ -66,7 +66,7 @@ chkuse - allows you to check if a variable was mentioned on a certain line or li
 endVar - deletes a file variable at the end of current operation to prevent unnecessary usage of RAM. endVar (uselessVar)
 
 Advanced
-kWindow - Summons a Windows 10 window for drawing or buttons. kWindow (resolution, uses x== and y== if config is enabled) (window ID) (window Title) (resizeable? bool)
+kWindow - Summons a Windows 10 window for drawing or buttons. kWindow (resolution // uses x== and y== if config is enabled //) (window ID) (window Title) (resizeable? //bool//)
 classDec - Creates a class with custom datatypes.
 classDec "ClassName" {
     attributeName1
@@ -77,9 +77,14 @@ objeDec "ClassName" {
     attributeValue1
     attributeValue2
 }
+func - Creates a function, basically doing a block of code, then jumping back, or with "func functionName p", will run it parallel to your current code
+func functionName {
+     mouse.getPos variable1
+}
+
 
 Auxillaries
-mouse.getPos - grabs the mouse position then writes to a variable. mouse.getpos (variable1)
+mouse.getPos - grabs the mouse position then writes to a variable. mouse.getPos (variable1)
 key.getPress - grabs the current keypress then writes to a variable. key.getPress (variable1)
 
 
@@ -162,6 +167,7 @@ $hDelete - Sends a DELETE request method to an HTTP link. Syntax: $hDelete /your
 //This is a singleline comment
 /c this is a multi 
 line comment c/
+//This is an internal comment, this is good for use in parenthesis//
 
 █████████████ ██████  ██████ ██████     ██████ █████████████  ██████ ███████████████████    ██ ██████  
 ██     ██   ████   ████    ████   ██    ██   ████     ██   ████    ████   ██  ██   ██████   ████       
