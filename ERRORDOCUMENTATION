@@ -1,0 +1,31 @@
+█████████████ ██████  ██████ ██████     ██████ █████████████  ██████ ███████████████████    ██ ██████  
+██     ██   ████   ████    ████   ██    ██   ████     ██   ████    ████   ██  ██   ██████   ████       
+█████  ██████ ██████ ██    ████████     ██████ █████  ██████ ██    ████████   ██   ████ ██  ████   ███ 
+██     ██   ████   ████    ████   ██    ██   ████     ██     ██    ████   ██  ██   ████  ██ ████    ██ 
+█████████   ████   ██ ██████ ██   ██    ██   ███████████      ██████ ██   ██  ██   ████   ████ ██████  
+
+Syntax Errors
+
+errorcode: sError1 - Alulim
+explanation: 'if' improper syntax at 7-9
+troubleshoot: incorrect bracket usage - did you mean this?
+"if {
+    variable1 == 19
+} th... [rest of your code]"
+This error occurs if you are missing, or have improperly placed your curly brackets.
+-------------------------------------------------------------------------------------------------------------
+errorcode: sError2 - Alalngar
+explanation: 'if' improper syntax at 7-9
+troubleshoot: 'varrable1' is not a variable - did you mean this?
+"if {
+    variable1 == 19
+} th... [rest of your code]"
+This error occurs if a variable has been misspelt, or does not exist in your operation.
+the variable suggestor works via seeing if there is a variable within 3 changed letters of the improper variable, and choose the first one. if there is not, and theres more than 3 changed letters, then it will post, instead of the correct variable, itll say '//choose a variable'
+-------------------------------------------------------------------------------------------------------------
+errorcode sError3 - Oleg
+explanation: 'declare' possible misspelt syntax at 2
+troubleshoot: 'declrae' is not syntax - did you mean this?
+"declare variable1 (bool)"
+Occurs if declare (or another syntax) is misspelt, works just like the variable suggestor, but it pulls from a list of most basic commands, with the top being most basic, and the bottom being least
+-------------------------------------------------------------------------------------------------------------
