@@ -8,19 +8,19 @@ variable c OR var c
 This syntax will create a "variable", variables are singular values that only hold one piece of data, like an Integer, Decimal, String or other datatype.
 usage:
 
-var c "variable" (int);
-Creates an integer named "variable"
+var c file "variable" (int);
+Creates an integer named "variable" which is usable by the entire file
 
-variable c "HohnDojName" (string);
-Creates a string named "HohnDojName"
+variable c sub "HohnDojName" (string);
+Creates a string named "HohnDojName" which is usable by the sub-file
 
 --------------------
 array c
 This creates an "array", Arrays can hold multiple values of the same datatype.
 usage:
 
-array c "array" (decimal) (1-10);
-Creates a decimal array called "array"
+array c public "array" (decimal) (1-10);
+Creates a decimal array called "array" which can be used by all files that can see it
 
 --------------------
 mixedArray c OR mArray c
@@ -41,7 +41,7 @@ class c
 Creates a class, a fundamental of OOP languages and a "blueprint" for objects.
 usage:
 
-class c public "class" dat {
+class c publicl "class" dat {
 "name:" (string);
 "age:" (int);
 } met {
@@ -49,7 +49,7 @@ speak{
 print("my name is " ((class)(object)name:));
 }
 }
-Creates a class called "class" which is public (accessible by all "linked" files), this also has a method (within the met curly braces) called "speak" which prints the name of the object defined. the (class) is to identify where to pull the method from
+Creates a class called "class" which is publicl (accessible by all "linked" files), this also has a method (within the met curly braces) called "speak" which prints the name of the object defined. the (class) is to identify where to pull the method from
 class c file "state" dat {
 "name:" (string);
 "capital:" (string);
@@ -92,8 +92,15 @@ This function, when called would print "this is a function" and would then run t
 2. Data Usage
 
 --------------------
+met r
+Runs a methods code, the r is a keyword for run.
+usage:
+
+met(hohninfo)(class(speak));
+Runs the "speak" method from the class named "class" using the info from "hohninfo"
+--------------------
 func r
-Runs a function's code, the r is a keyword for run.
+Runs a function's code
 usage:
 
 func r (call_me funky);
