@@ -1,0 +1,31 @@
+
+
+1. Creation of Classes, Objects, Variables, ETC.
+  1a. Simples
+----------
+variable c OR var c
+This syntax will create a "variable", variables are singular values that only hold one piece of data, like an Integer, Decimal, String or other datatype.
+usage:
+
+var c "variable" (int);
+Creates an integer named "variable"
+
+variable c "HohnDojName" (string);
+Creates a string named "HohnDojName"
+
+----------
+array c
+This creates an "array", Arrays can hold multiple values of the same datatype.
+usage:
+array c "array" (decimal) (1-10)
+Creates a decimal array called "array"
+
+----------
+mixedArray c OR mArray c
+This creates a "mixed array", Mixed arrays can hold multiple values of multiple datatypes.
+usage:
+mArray c "mixedArray" {
+(1-50) (int)
+(51-100) (dec)
+}
+Creates a Mixed Array called "mixedArray" with data 1-50 being integers, and 51-100 being decimals.
