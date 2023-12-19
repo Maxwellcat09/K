@@ -2,6 +2,7 @@
 
 1. Creation of Classes, Objects, Variables, ETC.
   1a. Simples
+
 --------------------
 variable c OR var c
 This syntax will create a "variable", variables are singular values that only hold one piece of data, like an Integer, Decimal, String or other datatype.
@@ -27,9 +28,9 @@ This creates a "mixed array", Mixed arrays can hold multiple values of multiple 
 usage:
 
 mArray c "mixedArray" {
-(1-50) (int)
-(51-100) (dec)
-};
+(1-50) (int);
+(51-100) (dec);
+}
 Creates a Mixed Array called "mixedArray" with data 1-50 being integers, and 51-100 being decimals.
 
 --------------------
@@ -47,20 +48,20 @@ class c public "class" dat {
 speak{
 print("my name is " ((class)(object)name:));
 }
-};
+}
 Creates a class called "class" which is public (accessible by all "linked" files), this also has a method (within the met curly braces) called "speak" which prints the name of the object defined. the (class) is to identify where to pull the method from
 class c file "state" dat {
 "name:" (string);
 "capital:" (string);
 "population:" (int);
 } met {
-};
+}
 Creates a class called "state" which is file-accessible (accessible by only code in the file)
 class c sub "city" dat {
 "name:" (string);
 "population:" (int);
 } met {
-};
+}
 Creates a class called "city" which is only sub-file-accessible (accessible only by code between the start{{ and }}end brackets, aka sub-file)
 
 --------------------
@@ -80,9 +81,20 @@ Creates a function, fundamentaly the same as a method, however is independent fr
 usage:
 
 func c public "call_me funky" {
-print("this is a function")
-met(hohninfo)(class(speak))
-}
+print("this is a function");
+met(hohninfo)(class(speak));
+};
 This function, when called would print "this is a function" and would then run the method from class called speak, using the hohninfo object's information
 
 --------------------
+
+
+2. Data Usage
+
+--------------------
+func r
+Runs a function's code, the r is a keyword for run.
+usage:
+
+func r (call_me funky);
+this would run the function "call_me funky"
