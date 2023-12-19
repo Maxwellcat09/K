@@ -50,4 +50,4 @@ class c sub "city" {
 "name:"
 "population:"
 };
-Creates a class called "city" which is only subfile-accessible (accessible only by code between the start{{ and }}end brackets, aka a subfile)
+Creates a class called "city" which is only sub-file-accessible (accessible only by code between the start{{ and }}end brackets, aka sub-file)
