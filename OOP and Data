@@ -113,3 +113,38 @@ this would run the function "call_me funky"
 3. Manipulation
 
 --------------------
+variable s OR var s
+Sets the value of a variable depending on its datatype, s is the keyword for "set"
+usage:
+
+var s (variable) (17)
+Sets the variable named "variable" to a value of 17
+
+--------------------
+array s
+Sets the value of a number in an array, or uses automation to make things easier
+
+array s (array) {
+(4) (27)
+//the first number is the array number that is being set, the second number is the value it is being changed to
+(12) (3)
+(15) (8)
+}
+Sets the value of variable 4 in an array called "array" to an integer of 27, variable 12 to 3, and variable 15 to 8
+
+array s (array) {
+autos(1-50)(ascending(1-50))
+autos(51-100)(descending(49-1))
+}
+Sets array variables 1-50 to ascending order from 1 to 50, and variables 51-100 to numbers 49-1
+
+--------------------
+mixedArray s OR mArray s
+Works the same way as array s, just has support for the mixed part of mixed array 
+array s (array) {
+autos(1-50)(ascending(1-50)(int))
+autos(51-100)(descending(49.0000-1.0000)(dec))
+}
+Sets array variables 1-50 to ascending order from 1 to 50 in integer form, and variables 51-100 to numbers 49-1 in decimal form
+
+--------------------
