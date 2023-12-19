@@ -81,7 +81,7 @@ usage:
 
 func c public "call_me funky" {
 print("this is a function")
-met(class(speak(hohninfo)))
+met(hohninfo)(class(speak))
 }
 This function, when called would print "this is a function" and would then run the method from class called speak, using the hohninfo object's information
 
