@@ -17,7 +17,7 @@ Creates a string named "HohnDojName"
 array c
 This creates an "array", Arrays can hold multiple values of the same datatype.
 usage:
-array c "array" (decimal) (1-10)
+array c "array" (decimal) (1-10);
 Creates a decimal array called "array"
 
 ----------
@@ -27,5 +27,27 @@ usage:
 mArray c "mixedArray" {
 (1-50) (int)
 (51-100) (dec)
-}
+};
 Creates a Mixed Array called "mixedArray" with data 1-50 being integers, and 51-100 being decimals.
+
+  1b. Objects
+----------
+class c
+Creates a class, a fundamental of OOP languages and a "blueprint" for objects.
+usage:
+class c public "class" {
+"name:" (string)
+"age:" (int)
+};
+Creates a class called "class" which is public (accessible by all "linked" files)
+class c file "state" {
+"name:"
+"capital:"
+"population:"
+};
+Creates a class called "state" which is file-accessible (accessible by only code in the file)
+class c sub "city" {
+"name:"
+"population:"
+};
+Creates a class called "city" which is only subfile-accessible (accessible only by code between the start{{ and }}end brackets, aka a subfile)
