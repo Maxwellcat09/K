@@ -141,6 +141,8 @@ Sets array variables 1-50 to ascending order from 1 to 50, and variables 51-100 
 --------------------
 mixedArray s OR mArray s
 Works the same way as array s, just has support for the mixed part of mixed array 
+usage:
+
 array s (array) {
 autos(1-50)(ascending(1-50)(int))
 autos(51-100)(descending(49.0000-1.0000)(dec))
