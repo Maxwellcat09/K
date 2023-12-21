@@ -1,3 +1,18 @@
 
 1. If/Else statements
+  1a. Basic if statements
 
+--------------------
+if statements
+Usage:
+
+if {
+(variable = true);
+} then {
+printm {
+("Hello");
+("World!");
+}
+This simple program will check if "variable" is true, and will then print "Hello" on line one, and "World!" on line 2.
+
+--------------------
