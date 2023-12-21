@@ -7,7 +7,7 @@ if statements
 Usage:
 
 if {
-(variable = true);
+(variable == true);
 } then {
 printm {
 ("Hello");
