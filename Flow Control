@@ -3,16 +3,47 @@
   1a. Basic if statements
 
 --------------------
-if statements
+if
+An if statement checks if all condition is equal to the desired value, then does a set of instructions
 Usage:
 
 if {
 (variable == true);
+(array(7) == 5.2);
 } then {
 printm {
 ("Hello");
 ("World!");
 }
-This simple program will check if "variable" is true, and will then print "Hello" on line one, and "World!" on line 2.
+This simple program will check if "variable" is true and if the 7th datapoint in "array" is 5.2, and will then print "Hello" on line one, and "World!" on line 2.
+--------------------
+if(any) 
+An if(any) statement checks if any condition is equal to the desired value, then does a set of instructions
+Usage:
+
+if(any) {
+(variable == true);
+(array(7) == 5.2);
+} then {
+printm {
+("Hello");
+("World!");
+}
+This simple program will check if either "variable" is true or if the 7th datapoint in "array" is 5.2, and will then print "Hello" on line one, and "World!" on line 2.
+
+--------------------
+else
+An else statement will be ran if an if statement's conditions are not met
+Usage:
+
+if {
+(variableString == "hello");
+} then {
+printf(variableString /n%/ "world!")
+} else {
+print("Goodbye!")
+}
+This code snippet checks if a variable called "variableString" is text "hello" and then formatted prints the variable's data on line 1, and then prints "world!" on the next line. If the variable is not "hello", then it 
+prints "Goodbye!"
 
 --------------------
