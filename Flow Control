@@ -23,7 +23,9 @@ Usage:
 
 if(any) {
 (variable == true);
-(array(7) == 5.2);
+array {
+(7 == 5.2);
+}
 } then {
 printm {
 ("Hello");
@@ -39,11 +41,40 @@ Usage:
 if {
 (variableString == "hello");
 } then {
-printf(variableString /n%/ "world!")
+printf(variableString /n%/ "world!");
 } else {
-print("Goodbye!")
+print("Goodbye!");
 }
 This code snippet checks if a variable called "variableString" is text "hello" and then formatted prints the variable's data on line 1, and then prints "world!" on the next line. If the variable is not "hello", then it 
 prints "Goodbye!"
+
+--------------------
+elseif
+An elseif statement works like an if statement combined with an else statement. Basically, its an else statement that also requires conditions to function.
+Usage:
+
+if {
+colorArray{
+(1 == 30);
+(2 == 0);
+(3 == 110);
+}
+} then {
+printf(colorArray(1,2,3) /n%/ " Blue!");
+} elseif {
+colorArray{
+(1 == 110);
+(2 == 0);
+(3 == 30);
+} then {
+printf(colorArray(1,2,3) /n%/ " Burgundy!");
+} else {
+print("Im not sure");
+func r (userColorPrompt);
+print("Ah, I see now, the color is " (userColorAnswer) ", I'll remember that!")
+clone(userColorAnswer) (userColorMemory(1))
+}
+This code allows a user to specify 2 specific numbers, a simple print code will then "recognize" those colors. if it does not recognize the color, it clones it to a dynamic variable. a dynamic variable is a variable that 
+has (n) somewhere in its name and can have that number (n) increased when a different variable is cloned to it.
 
 --------------------
