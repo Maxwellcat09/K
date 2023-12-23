@@ -53,26 +53,36 @@ elseif
 An elseif statement works like an if statement combined with an else statement. Basically, its an else statement that also requires conditions to function.
 Usage:
 
-if {
-colorArray{
-(1 == 30);
-(2 == 0);
-(3 == 110);
+array c public "colorArray" (decimal) (1-3);
+func s {
+    (1,30)
+    (2,0)
+    (3,110)
 }
+func c public "userColorPrompt" {
+    var c public "userColorAnswer" (string)
+    prompt (userColorAnswer);
+}
+if {
+    colorArray{
+        (1 == 30);
+        (2 == 0);
+        (3 == 110);
+    }
 } then {
-printf(colorArray(1,2,3) /n%/ " Blue!");
+    printf(colorArray(1,2,3) /n%/ " Blue!");
 } elseif {
-colorArray{
-(1 == 110);
-(2 == 0);
-(3 == 30);
+    colorArray{
+        (1 == 110);
+        (2 == 0);
+        (3 == 30);
 } then {
-printf(colorArray(1,2,3) /n%/ " Burgundy!");
+    printf(colorArray(1,2,3) /n%/ " Burgundy!");
 } else {
-print("Im not sure");
-func r (userColorPrompt);
-print("Ah, I see now, the color is " (userColorAnswer) ", I'll remember that!")
-clone(userColorAnswer) (userColorMemory(1))
+    print("Im not sure");
+    func r (userColorPrompt);
+    print("Ah, I see now, the color is " (userColorAnswer) ", I'll remember that!");
+    clone(userColorAnswer) (userColorMemory(1));
 }
 This code allows a user to specify 2 specific numbers, a simple print code will then "recognize" those colors. if it does not recognize the color, it clones it to a dynamic variable. a dynamic variable is a variable that 
 has (n) somewhere in its name and can have that number (n) increased when a different variable is cloned to it.
