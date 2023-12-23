@@ -28,8 +28,8 @@ This creates a "mixed array", Mixed arrays can hold multiple values of multiple 
 usage:
 
 mArray c "mixedArray" {
-(1-50) (int);
-(51-100) (dec);
+  (1-50) (int);
+  (51-100) (dec);
 }
 Creates a Mixed Array called "mixedArray" with data 1-50 being integers, and 51-100 being decimals.
 
@@ -42,24 +42,25 @@ Creates a class, a fundamental of OOP languages and a "blueprint" for objects.
 usage:
 
 class c publicl "class" dat {
-"name:" (string);
-"age:" (int);
+  "name:" (string);
+  "age:" (int);
 } met {
-speak{
-print("my name is " ((class)(object)name:));
-}
+  speak{
+    print("my name is " ((class)(object)name:));
+  }
 }
 Creates a class called "class" which is publicl (accessible by all "linked" files), this also has a method (within the met curly braces) called "speak" which prints the name of the object defined. the (class) is to identify where to pull the method from
 class c file "state" dat {
-"name:" (string);
-"capital:" (string);
-"population:" (int);
+  "name:" (string);
+  "capital:" (string);
+  "population:" (int);
 } met {
 }
 Creates a class called "state" which is file-accessible (accessible by only code in the file)
+
 class c sub "city" dat {
-"name:" (string);
-"population:" (int);
+  "name:" (string);
+  "population:" (int);
 } met {
 }
 Creates a class called "city" which is only sub-file-accessible (accessible only by code between the start{{ and }}end brackets, aka sub-file)
@@ -70,8 +71,8 @@ Creates an object based on a class, another fundamental of OOP languages. Variab
 usage:
 
 object c file "hohninfo" (class) {
-name:("Hohn Doj");
-age:(27);
+  name:("Hohn Doj");
+  age:(27);
 }
 Creates an object called "hohninfo" with datapoints of the name Hohn Doj and age 27 that can be called by methods within the file.
 
@@ -81,8 +82,8 @@ Creates a function, fundamentaly the same as a method, however is independent fr
 usage:
 
 func c public "call_me funky" {
-print("this is a function");
-met(hohninfo)(class(speak));
+  print("this is a function");
+  met(hohninfo)(class(speak));
 }
 This function, when called would print "this is a function" and would then run the method from class called speak, using the hohninfo object's information
 
@@ -125,16 +126,16 @@ array s
 Sets the value of a number in an array, or uses automation to make things easier
 
 array s (array) {
-(4,27);
-//the first number is the array number that is being set, the second number is the value it is being changed to
-(12,3);
-(15,8);
+  (4,27);
+  //the first number is the array number that is being set, the second number is the value it is being changed to
+  (12,3);
+  (15,8);
 }
 Sets the value of variable 4 in an array called "array" to an integer of 27, variable 12 to 3, and variable 15 to 8
 
 array s (array) {
-autos(1-50)(ascending(1-50))
-autos(51-100)(descending(49-1))
+  autos(1-50)(ascending(1-50))
+  autos(51-100)(descending(49-1))
 }
 Sets array variables 1-50 to ascending order from 1 to 50, and variables 51-100 to numbers 49-1
 
@@ -144,8 +145,8 @@ Works the same way as array s, just has support for the mixed part of mixed arra
 usage:
 
 array s (array) {
-autos(1-50)(ascending(1-50)(int))
-autos(51-100)(descending(49.0000-1.0000)(dec))
+  autos(1-50)(ascending(1-50)(int))
+  autos(51-100)(descending(49.0000-1.0000)(dec))
 }
 Sets array variables 1-50 to ascending order from 1 to 50 in integer form, and variables 51-100 to numbers 49-1 in decimal form
 
