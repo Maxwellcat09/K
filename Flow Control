@@ -1,6 +1,6 @@
 
-1. If/Else statements
-  1a. Basic if statements
+1. Selection statements
+  1a. if/elseif/else/then
 
 --------------------
 if
@@ -17,6 +17,7 @@ if {
   }
 }
 This simple program will check if "variable" is true and if the 7th datapoint in "array" is 5.2, and will then print "Hello" on line one, and "World!" on line 2.
+
 --------------------
 if(any) 
 An if(any) statement checks if any condition is equal to the desired value, then does a set of instructions
@@ -88,5 +89,40 @@ if {
 }
 This code allows a user to specify 2 specific numbers, a simple print code will then "recognize" those colors. if it does not recognize the color, it clones it to a dynamic variable. a dynamic variable is a variable that 
 has (n) somewhere in its name and can have that number (n) increased when a different variable is cloned to it.
+elseif(any) is also a statement, but i can't be asked to make an entire code block for it rn
+
+--------------------
+
+  1b. switch statements
+
+--------------------
+switch
+Switch statements allow you to choose a "case" based on a variable's value
+Usage:
+
+var c file "intVariable" int
+var s (intVariable) (2)
+switch(intVariable) {
+  case 1:
+    print("One!");
+    break;
+  case 2:
+    print("Two!");
+    break;
+  default:
+    print(intVariable "!");
+}
+This snippit of code would print "Two!" and would then break out of the switch statement. if the int were 1, it would print "One!", and if it was anything else, it would print the number, and then an exclaimation point
+
+--------------------
+2. Direct flow control
+
+--------------------
+jump()
+Jumps to a specified line
+Usage:
+
+jump(7)
+Jumps to line 7
 
 --------------------
