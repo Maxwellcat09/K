@@ -118,7 +118,7 @@ variable s OR var s
 Sets the value of a variable depending on its datatype, s is the keyword for "set"
 usage:
 
-var s (variable) (17)
+var s (variable) (17);
 Sets the variable named "variable" to a value of 17
 
 --------------------
@@ -134,8 +134,8 @@ array s (array) {
 Sets the value of variable 4 in an array called "array" to an integer of 27, variable 12 to 3, and variable 15 to 8
 
 array s (array) {
-  autos(1-50)(ascending(1-50))
-  autos(51-100)(descending(49-1))
+  auto s (1-50)(ascending(1-50));
+  auto s (51-100)(descending(49-1));
 }
 Sets array variables 1-50 to ascending order from 1 to 50, and variables 51-100 to numbers 49-1
 
@@ -145,8 +145,8 @@ Works the same way as array s, just has support for the mixed part of mixed arra
 usage:
 
 array s (array) {
-  autos(1-50)(ascending(1-50)(int))
-  autos(51-100)(descending(49.0000-1.0000)(dec))
+  auto s (1-50)(ascending(1-50)(int));
+  auto s (51-100)(descending(49.0000-1.0000)(dec));
 }
 Sets array variables 1-50 to ascending order from 1 to 50 in integer form, and variables 51-100 to numbers 49-1 in decimal form
 
