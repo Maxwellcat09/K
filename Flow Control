@@ -126,6 +126,11 @@ jump(7)
 Jumps to line 7
 
 --------------------
+pause
+Pauses for a certain amount of time. formatted as (seconds, minutes, hours, days)
+
+pause(10, 0, 0, 0)p
+--------------------
 3. Looping statements
   3a. for, while, and loop
 
@@ -134,6 +139,7 @@ for
 A for operation checks a condition, completes the body of code (that which is being looped), and then does a step at the end of the body.
 Usage:
 
-for(intVar == 1, inc(intVar)) {
+for(intVar =< 10, inc(intVar)) {
 print(intVar);
 }
+This code would print and increase (inc) a variable called intVar until it reaches 10, in which the code is then broken out of.
