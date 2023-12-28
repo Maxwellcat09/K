@@ -100,8 +100,8 @@ switch
 Switch statements allow you to choose a "case" based on a variable's value
 Usage:
 
-var c file "intVariable" int
-var s (intVariable) (2)
+var c (file) "intVariable" (int)
+var s (intVariable) (2);
 switch(intVariable) {
   case 1:
     print("One!");
@@ -126,6 +126,14 @@ jump(7)
 Jumps to line 7
 
 --------------------
-
 3. Looping statements
   3a. for, while, and loop
+
+--------------------
+for
+A for operation checks a condition, completes the body of code (that which is being looped), and then does a step at the end of the body.
+Usage:
+
+for(intVar == 1, inc(intVar)) {
+print(intVar);
+}
